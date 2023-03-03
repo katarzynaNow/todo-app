@@ -16,6 +16,7 @@ public interface TaskRepository {
     Optional<Task> findById(Integer id);//pobranie konkretnego tasku
 
     boolean existsById(Integer id);
+    boolean existsByDoneIsFalseAndGroup_Id(Integer groupId);
 
     Task save(Task entity);
 
