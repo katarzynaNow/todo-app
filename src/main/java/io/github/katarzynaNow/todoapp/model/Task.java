@@ -21,7 +21,12 @@ public class Task {
     @ManyToOne//many tasks to one group
     @JoinColumn(name = "task_group_id")
     private TaskGroup group;
-    public Task() {
+    Task() {
+    }
+
+    public Task(String description, LocalDateTime deadline) {
+        this.description = description;
+        this.deadline = deadline;
     }
 
     public int getId() {
